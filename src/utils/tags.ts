@@ -1,6 +1,10 @@
 import ReactJS from "../Icons/ReactJS.astro";
 import TailwindCSS from "../Icons/TailwindCSS.astro";
 import Astro from "../Icons/AstroIcon.astro";
+import Elastic from "../Icons/Elastic.astro";
+import Express from "../Icons/Express.astro";
+import Python from "../Icons/Python.astro";
+import Vite from "../Icons/Vite.astro";
 
 export const TAGS = {
   REACT: {
@@ -17,5 +21,25 @@ export const TAGS = {
     name: "Astro",
     class: "bg-black text-white",
     icon: Astro,
+  },
+  ELASTIC: {
+    name: "ElasticSearch",
+    class: "bg-white text-black",
+    icon: Elastic,
+  },
+  EXPRESS: {
+    name: "Express JS",
+    class: "bg-black text-white",
+    icon: Express,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-black text-white",
+    icon: Python,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-black text-white",
+    icon: Vite,
   },
 };
