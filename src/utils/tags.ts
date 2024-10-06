@@ -5,6 +5,10 @@ import Elastic from "../Icons/Elastic.astro";
 import Express from "../Icons/Express.astro";
 import Python from "../Icons/Python.astro";
 import Vite from "../Icons/Vite.astro";
+import Vercel from "../Icons/Vercel.astro";
+import Supabase from "../Icons/Supabase.astro";
+import Hugging from "../Icons/Hugging.astro";
+import Bootstrap from "../Icons/Bootstrap.astro";
 
 export const TAGS = {
   REACT: {
@@ -41,5 +45,25 @@ export const TAGS = {
     name: "Vite",
     class: "bg-black text-white",
     icon: Vite,
+  },
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-black text-white",
+    icon: Vercel,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-black text-white",
+    icon: Supabase,
+  },
+  HUGGING: {
+    name: "Hugging Face Transformers",
+    class: "bg-black text-white",
+    icon: Hugging,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-black text-white",
+    icon: Bootstrap,
   },
 };

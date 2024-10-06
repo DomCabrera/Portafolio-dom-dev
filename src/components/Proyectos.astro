@@ -9,8 +9,32 @@ const PROJECTS = [
     description:
       "Análisis bibliométrico de la producción académica, visualizando colaboraciones entre autores, evolución temática, autores más prolíficos y temas recurrentes a través de mapas conceptuales y nubes de palabras.",
     link: "https://bibliotecasibe.ecosur.mx/sibe/analitica-de-datos-de-la-produccion-academica-de-ecosur/?autores_por=unidad&mostrar_hasta=400&agrupado=true",
+    linkGit: "",
     image: "/produccionCientifica.webp",
     tags: [TAGS.REACT],
+  },
+  {
+    title: "Sistema de control de acceso UACH",
+    description:
+      "Sistema integral de control y registro para la Universidad de los Altos de Chiapas que permita una gestión eficiente, segura y precisa de los alumnos, maestros, directores y demás personal al ingresar al campus",
+    link: "https://uach-park.vercel.app/",
+    image: "/uachPark.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.VERCEL, TAGS.VITE],
+  },
+  {
+    title: "Citas UACH",
+    description:
+      "Generador de citas para personal administrativo de la institución.",
+    link: "https://citasuach.vercel.app/",
+    image: "/citasUach.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.VITE,
+      TAGS.VERCEL,
+      TAGS.SUPABASE,
+      TAGS.EXPRESS,
+      TAGS.BOOTSTRAP,
+    ],
   },
 ];
 ---
@@ -22,17 +46,17 @@ const PROJECTS = [
 
   {
     PROJECTS.map(({ image, title, description, tags, link }) => (
-      <article class="sm:grid grid-cols-5 bg-gray-900 p-4 rounded-lg ">
+      <article class="sm:grid grid-cols-5 bg-gray-900 p-4 rounded-lg mb-4 ">
         <div class="col-span-3">
           <h3 class="text-xl sm:text-2xl font-semibold text mb-2 text-blue-200">
             {title}
           </h3>
           <p class="text-base mb-4 text-pretty">{description}</p>
-          <ul class="flex gap-x-2 flex-row">
+          <ul class="flex gap-x-2 flex-wrap">
             {tags.map((tag) => (
               <li>
                 <span
-                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 my-1`}
                 >
                   <tag.icon class="size-4" />
                   {tag.name}
@@ -53,7 +77,7 @@ const PROJECTS = [
             href={link}
             target="_blank"
             rel="noopener"
-            class="bg-gray-600 px-2 gap-2 py-1 my-4 flex justify-center rounded-md"
+            class="bg-gray-600 px-2 gap-2 py-1 my-3 flex justify-center rounded-md"
           >
             <Page class="size-7" /> Ver proyecto
           </a>
