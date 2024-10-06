@@ -1,0 +1,62 @@
+---
+import Page from "../Icons/Page.astro";
+import Code from "../Icons/Code.astro";
+import { TAGS } from "../utils/tags";
+
+const PROJECTS = [
+  {
+    title: "Analiticas de producción académica.",
+    description:
+      "Análisis bibliométrico de la producción académica, visualizando colaboraciones entre autores, evolución temática, autores más prolíficos y temas recurrentes a través de mapas conceptuales y nubes de palabras.",
+    link: "https://bibliotecasibe.ecosur.mx/sibe/analitica-de-datos-de-la-produccion-academica-de-ecosur/?autores_por=unidad&mostrar_hasta=400&agrupado=true",
+    image: "/produccionCientifica.webp",
+    tags: [TAGS.REACT],
+  },
+];
+---
+
+<section class="max-w-xl">
+  <h2 class="text-3xl font-bold flex items-center sm:gap-4 gap-2 mb-8">
+    Proyectos <span><Code /></span>
+  </h2>
+
+  {
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+      <article class="sm:grid grid-cols-5 bg-gray-900 p-4 rounded-lg ">
+        <div class="col-span-3">
+          <h3 class="text-xl sm:text-2xl font-semibold text mb-2 text-blue-200">
+            {title}
+          </h3>
+          <p class="text-base mb-4 text-pretty">{description}</p>
+          <ul class="flex gap-x-2 flex-row">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="col-span-2 flex justify-center items-center">
+          <img
+            class="rounded shadow-2xl shadow-white/10 w-60 my-4"
+            src={image}
+            alt="Captura de pantalla de proyecto"
+          />
+        </div>
+        <div class="col-span-5">
+          <a
+            href={link}
+            class="bg-gray-600 px-2 gap-2 py-1 my-4 flex justify-center rounded-md"
+          >
+            <Page class="size-7" /> Ver proyecto
+          </a>
+        </div>
+      </article>
+    ))
+  }
+</section>

@@ -1,0 +1,44 @@
+---
+import Laboral from "../Icons/Laboral.astro";
+import User from "../Icons/User.astro";
+---
+
+<section class="max-w-xl">
+  <div class="my-4">
+    <h2 class="sm:text-2xl text-xl">
+      <span class="text-blue-600 sm:text-3xl font-semibold text-xl">¡Hola!</span
+      > soy Dominic Cabrera recien egresado de Ingenieria en Sistemas Computacionales.
+      Entusiasta de nuevos conocimientos y retos.
+    </h2>
+  </div>
+
+  <div class="my-20">
+    <h2 class="text-3xl font-bold flex items-center sm:gap-4 gap-2 mb-8">
+      Experiencia laboral <span><Laboral /></span>
+    </h2>
+    <div
+      class="sm:grid grid-cols-5 bg-gray-900 p-4 rounded-lg transition hover:scale-105"
+    >
+      <div class="col-span-2 justify-center items-center flex">
+        <span class="p-2">
+          <User />
+        </span>
+      </div>
+      <div class="col-span-3">
+        <h3 class="text-3sm sm:text-2xl font-semibold">SIBE ECOSUR</h3>
+        <p class="text-sm text-yellow-400 my-1">Actualmente</p>
+        <p class="text-sm">
+          Experiencia de 1 año programando para <span
+            ><a
+              href="https://bibliotecasibe.ecosur.mx/sibe/"
+              target="_blank"
+              rel="noopener"
+              class="text-green-700 font-semibold"
+              >SIBE Ecosur Unidad San Cristóbal</a
+            ></span
+          > como desarrollador full-stack y desarrollador de IA.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

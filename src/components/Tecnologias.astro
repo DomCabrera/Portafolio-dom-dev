@@ -1,0 +1,30 @@
+---
+import { TAGS } from "../utils/tags";
+import TecnologiasIcon from "../Icons/Tecnologias.astro";
+
+type tag = {
+  name: string;
+  class: string;
+  icon: any;
+};
+---
+
+<section class="max-w-xl my-20">
+  <h2
+    class="text-3xl font-bold flex items-center sm:gap-4 gap-2 mb-8 justify-center"
+  >
+    Tecnologias <span><TecnologiasIcon /></span>
+  </h2>
+  <ul class="sm:flex sm:gap-x-2 sm:flex-row justify-center">
+    {
+      Object.values(TAGS).map((tag: tag) => (
+        <li class={`py-2 ${tag.class} sm:px-2 rounded-lg my-5`}>
+          <span class="flex justify-center">
+            {tag.icon && <tag.icon class="size-28" />}
+          </span>
+          <span class="flex justify-center mt-2">{tag.name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>
